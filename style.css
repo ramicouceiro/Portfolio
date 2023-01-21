@@ -333,6 +333,7 @@ body {
 .burger_menu {
   display: none;
 }
+
 /* Media queries */
 @media (max-width: 768px) {
   .skills {
@@ -421,8 +422,5 @@ body {
     height: 100vh;
     background-color: #ececec;
     z-index: 1;
-  }
-  .nav__btn {
-    display: none;
   }
 }
