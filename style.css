@@ -359,9 +359,6 @@ body {
   }
 }
 @media (max-width: 576px) {
-  .nav__btn {
-    display: none;
-  }
   .skills {
     flex-direction: column;
     align-items: center;
@@ -410,6 +407,12 @@ body {
     cursor: pointer;
     z-index: 2;
   }
+  .nav__btn {
+    display: none;
+  }
+  .nav_close {
+    animation: slideout 1s;
+  }
   .nav_open {
     display: flex;
     flex-direction: column;
@@ -422,5 +425,30 @@ body {
     height: 100vh;
     background-color: #ececec;
     z-index: 1;
+    animation: slidein 1s;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 00%;
+    width: 300%;
   }
 }
