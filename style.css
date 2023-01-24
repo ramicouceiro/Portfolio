@@ -333,7 +333,25 @@ body {
 .burger_menu {
   display: none;
 }
-
+/* FOOTER */
+.footer__container {
+  background-color: #d4d1d1;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 5px 5px 30px #1e1e1e;
+}
+.footer__social a {
+  text-decoration: none;
+}
+.footer__social img {
+  margin: 10px 5px;
+  width: 50px;
+  height: 50px;
+}
 /* Media queries */
 @media (max-width: 768px) {
   .skills {
