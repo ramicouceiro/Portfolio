@@ -232,7 +232,7 @@ body {
 }
 
 .skills__about__subtitle {
-  text-align: justify;
+  text-align: center;
   font-weight: var(--regular);
   font-size: 1.2rem;
 }
@@ -416,10 +416,14 @@ body {
   .socials {
     display: none;
   }
+  .project__content {
+    text-align: center;
+    align-items: center;
+  }
   .project img {
-    width: 300px;
-    height: 200px;
-    margin-left: 30px;
+    width: 125%;
+    height: 125%;
+    /* margin-left: 50px; */
   }
   .project__languages {
     display: grid;
