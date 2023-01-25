@@ -285,6 +285,20 @@ body {
   margin: 3rem 0;
 }
 
+.project__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.project__container i {
+  font-size: 2rem;
+  color: #fabb0f;
+  margin: 2rem;
+  cursor: pointer;
+}
+
 .project__img {
   padding-right: 4rem;
   filter: drop-shadow(0px 0px 4px #1e1e1e);
