@@ -38,13 +38,15 @@ $(document).ready(function () {
 `);
   };
 
+  const projectContainer = $(".project");
+
   renderProjects(projectData[0]);
 
   // Boton siguiente y anterior
 
   const nextBtn = $(".fa-angle-right");
   const prevBtn = $(".fa-angle-left");
-
+  const tl = gsap.timeline({ defaults: { duration: 0.5 } });
   let index = 0;
 
   nextBtn.click(function () {
@@ -53,6 +55,7 @@ $(document).ready(function () {
       index = 0;
     }
     renderProjects(projectData[index]);
+    tl.fromTo(project, { x: -1000 }, { x: 0, duration: 1 });
   });
 
   prevBtn.click(function () {
@@ -61,5 +64,6 @@ $(document).ready(function () {
       index = projectData.length - 1;
     }
     renderProjects(projectData[index]);
+    tl.fromTo(project, { x: 1000 }, { x: 0, duration: 1 });
   });
 });
