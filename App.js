@@ -24,10 +24,9 @@ $(document).ready(function () {
         ${p.descripcion}
       </p>
       <div class="project__languages">
-        <span class="project__language">HTML</span>
-        <span class="project__language">CSS</span>
-        <span class="project__language">JavaScript</span>
-        <span class="project__language">Responsive</span>
+        ${p.languages
+          .map((l) => `<span class="project__language">${l}</span>`)
+          .join("")}
       </div>
       <a
         href="${p.link}"
@@ -55,7 +54,7 @@ $(document).ready(function () {
       index = 0;
     }
     renderProjects(projectData[index]);
-    tl.fromTo(project, { x: -1000 }, { x: 0, duration: 1 });
+    tl.fromTo(project, { x: 1000 }, { x: 0, duration: 1 });
   });
 
   prevBtn.click(function () {
@@ -64,6 +63,6 @@ $(document).ready(function () {
       index = projectData.length - 1;
     }
     renderProjects(projectData[index]);
-    tl.fromTo(project, { x: 1000 }, { x: 0, duration: 1 });
+    tl.fromTo(project, { x: -1000 }, { x: 0, duration: 1 });
   });
 });
