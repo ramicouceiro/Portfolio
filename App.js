@@ -55,7 +55,11 @@ $(document).ready(function () {
       index = 0;
     }
     renderProjects(projectData[index]);
-    tl.fromTo(project, { x: -1000 }, { x: 0, duration: 1 });
+    tl.fromTo(
+      project,
+      { x: 1000, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1 }
+    );
   });
 
   prevBtn.click(function () {
@@ -64,6 +68,10 @@ $(document).ready(function () {
       index = projectData.length - 1;
     }
     renderProjects(projectData[index]);
-    tl.fromTo(project, { x: 1000 }, { x: 0, duration: 1 });
+    tl.fromTo(
+      project,
+      { x: -1000, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1 }
+    );
   });
 });

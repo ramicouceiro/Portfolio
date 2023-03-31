@@ -159,6 +159,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .about__content {
@@ -172,6 +173,9 @@ body {
   font-weight: var(--bold);
   font-size: 2.5rem;
   letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about__separator {
