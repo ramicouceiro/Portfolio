@@ -24,10 +24,9 @@ $(document).ready(function () {
         ${p.descripcion}
       </p>
       <div class="project__languages">
-        <span class="project__language">HTML</span>
-        <span class="project__language">CSS</span>
-        <span class="project__language">JavaScript</span>
-        <span class="project__language">Responsive</span>
+        ${p.languages
+          .map((l) => `<span class="project__language">${l}</span>`)
+          .join("")}
       </div>
       <a
         href="${p.link}"
